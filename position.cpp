@@ -1,22 +1,26 @@
 #include "position.h"
 
-void Position::set_from_date(std::string from_date)
+void Position::set_from_date(unsigned int day, unsigned int month, unsigned int year)
 {
-  this->from_date = from_date;
+  this->from_date.day = day;
+  this->from_date.month = month;
+  this->from_date.year = year;
 }
 
-std::string Position::get_from_date(void)
+cv_date_t Position::get_from_date(void)
 {
   return from_date;
 }
 
 
-void Position::set_to_date(std::string to_date)
+void Position::set_to_date(unsigned int day, unsigned int month, unsigned int year)
 {
-  this->to_date = to_date;
+  this->to_date.day = day;
+  this->to_date.month = month;
+  this->to_date.year = year;
 }
 
-std::string Position::get_to_date(void)
+cv_date_t Position::get_to_date(void)
 {
   return to_date;
 }

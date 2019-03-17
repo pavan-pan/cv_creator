@@ -8,6 +8,7 @@
 #include <iostream>
 #include <fstream>
 
+
 class CV_parts
 {
   private:

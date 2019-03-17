@@ -3,23 +3,27 @@
 #include <string>
 
 
-void Education_qual::set_from_date(std::string from_date)
+void Education_qual::set_from_date(unsigned int day, unsigned int month, unsigned int year)
 {
-   this->from_date = from_date;
+   this->from_date.day = day;
+   this->from_date.month = month;
+   this->from_date.year = year;
 }
 
-std::string Education_qual::get_from_date()
+cv_date_t Education_qual::get_from_date()
 {
   return from_date;
 }
 
 
-void Education_qual::set_to_date(std::string to_date)
+void Education_qual::set_to_date(unsigned int day, unsigned int month, unsigned int year)
 {
-   this->to_date = to_date;
+   this->to_date.day = day;
+   this->to_date.month = month;
+   this->to_date.year = year;
 }
 
-std::string Education_qual::get_to_date()
+cv_date_t Education_qual::get_to_date()
 {
   return to_date;
 }
