@@ -8,6 +8,12 @@ void Education_qual::set_from_date(unsigned int day, unsigned int month, unsigne
    this->from_date.day = day;
    this->from_date.month = month;
    this->from_date.year = year;
+
+   if (from_date.checkDate() != 0)
+   {
+  	  std::cout << "from-date invalid " << std::endl;
+  	  return;
+   }
 }
 
 cv_date_t Education_qual::get_from_date()
@@ -21,6 +27,12 @@ void Education_qual::set_to_date(unsigned int day, unsigned int month, unsigned 
    this->to_date.day = day;
    this->to_date.month = month;
    this->to_date.year = year;
+
+   if (from_date.checkDate() != 0)
+  {
+	  std::cout << "from-date invalid " << std::endl;
+	  return;
+  }
 }
 
 cv_date_t Education_qual::get_to_date()

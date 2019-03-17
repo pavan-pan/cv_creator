@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "cv_date.h"
+#include <iostream>
 
 class Position
 {

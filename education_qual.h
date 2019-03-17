@@ -2,6 +2,7 @@
 #define EDUCATION_QUAL_H
 #include <string>
 #include "cv_date.h"
+#include <iostream>
 
 class Education_qual
 {
