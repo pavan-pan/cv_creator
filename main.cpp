@@ -3,7 +3,7 @@
  
 int main()
 {
-  CV_parts part2;
+  CV_parts part2("samplefile.txt");
   
   Position med_el;
   med_el.set_from_date ("03/2016");
@@ -20,6 +20,7 @@ int main()
   Education_qual edu1;
   edu1.set_from_date("06/2005");
   edu1.set_to_date("06/2009");
+  edu1.set_qualification("Bachelor of Engineering");
   edu1.set_university_name("Global academy of technology");
   edu1.set_grades("65%");
 
