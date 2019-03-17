@@ -56,16 +56,19 @@ int CV_parts::delete_education_qual()
 
 void CV_parts::print_education_qual()
 {
-  /*for (std::vector<Position>::iterator it=Education.begin(); it!=Education.end(); it++)
+  for (std::vector<Education_qual>::iterator it=Education.begin(); it!=Education.end(); it++)
   {
     std::cout << "position from date : " << it->get_from_date() << std::endl;
     std::cout << "position to date : " << it->get_to_date() << std::endl;
-    std::cout << "position name : " << it->get_position_name() << std::endl;
-    std::cout  << "position responsibilities :" << std::endl;
-    std::vector<std::string> ex = it->get_responsibilities();
-    for (std::vector<std::string>::iterator it1=ex.begin(); it1!=ex.end(); it1++)
-    {
-       std::cout << *it1 << std::endl;
-    }
-  }*/
+    std::cout << "university name : " << it->get_university_name() << std::endl;
+    std::cout << "qualification name : " << it->get_qualification() << std::endl;
+    std::cout << "grades : " << it->get_grades() << std::endl;
+
+  }
+}
+
+void CV_parts::print_CV()
+{
+	print_work_experience();
+	print_education_qual();
 }

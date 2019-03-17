@@ -21,5 +21,7 @@ class CV_parts
      int delete_education_qual();
      void print_education_qual();
 
+     void print_CV();
+
 };
 #endif

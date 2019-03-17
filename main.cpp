@@ -16,5 +16,15 @@ int main()
   
   part2.add_work_experience(med_el); 
   part2.print_work_experience();
+
+  Education_qual edu1;
+  edu1.set_from_date("06/2005");
+  edu1.set_to_date("06/2009");
+  edu1.set_university_name("Global academy of technology");
+  edu1.set_grades("65%");
+
+  part2.add_education_qual(edu1);
+
+  part2.print_CV();
   return 0;
 } 
