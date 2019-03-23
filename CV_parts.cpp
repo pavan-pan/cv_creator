@@ -38,10 +38,8 @@ void CV_parts::print_work_experience()
 {
   for (std::vector<Position>::iterator it=Work_experience.begin(); it!=Work_experience.end(); it++)
   {
-	cv_date_t from_date = it->get_from_date();
-	cv_date_t to_date = it->get_to_date();
-	CV_file_name << "position from date : " << from_date.day <<"/" << from_date.month << "/" << from_date.year << std::endl;
-	CV_file_name << "position to date : " << to_date.day << "/" << to_date.month << "/" << to_date.year << std::endl;
+	CV_file_name << "position from date : " << it->get_from_date() << std::endl;
+	CV_file_name << "position to date : " << it->get_to_date() << std::endl;
 	CV_file_name << "position name : " << it->get_position_name() << std::endl;
 	CV_file_name  << "position responsibilities :" << std::endl;
     std::vector<std::string> ex = it->get_responsibilities();
@@ -74,10 +72,8 @@ void CV_parts::print_education_qual()
 {
   for (std::vector<Education_qual>::iterator it=Education.begin(); it!=Education.end(); it++)
   {
-	  cv_date_t from_date = it->get_from_date();
-	  cv_date_t to_date = it->get_to_date();
-	  CV_file_name << "position from date : " << from_date.day <<"/" << from_date.month << "/" << from_date.year << std::endl;
-	  CV_file_name << "position to date : " << to_date.day <<"/" << to_date.month << "/" << to_date.year << std::endl;
+	  CV_file_name << "position from date : " << it->get_from_date() << std::endl;
+	  CV_file_name << "position to date : " << it->get_to_date() << std::endl;
 	  CV_file_name << "university name : " << it->get_university_name() << std::endl;
 	  CV_file_name << "qualification name : " << it->get_qualification() << std::endl;
 	  CV_file_name << "grades : " << it->get_grades() << std::endl;

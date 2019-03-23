@@ -17,9 +17,9 @@ private:
 public:
   //Position():from_date("99/9999"), to_date("99/9999"), position_name("blabla"), company_name("bla bla"){};
   void set_from_date (unsigned int day, unsigned int month, unsigned int year);
-  cv_date_t get_from_date ();
+  std::string get_from_date ();
   void set_to_date (unsigned int day, unsigned int month, unsigned int year);
-  cv_date_t get_to_date ();
+  std::string get_to_date ();
   void set_position_name (std::string position_name);
   std::string get_position_name ();
   void set_responsibilities (std::string responsibility);

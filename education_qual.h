@@ -14,9 +14,9 @@ class Education_qual
      std::string grades;
   public:
      void set_from_date(unsigned int day, unsigned int month, unsigned int year);
-     cv_date_t get_from_date ();
+     std::string get_from_date ();
      void set_to_date  (unsigned int day, unsigned int month, unsigned int year);
-     cv_date_t get_to_date ();
+     std::string get_to_date ();
      void set_university_name (std::string univ_name);
      std::string get_university_name ();
      void set_qualification (std::string qualification);

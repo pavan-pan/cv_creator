@@ -1,4 +1,5 @@
 #include "CV_parts.h"
+#include "cv_date.h"
 #include <iostream>
  
 int main()
@@ -28,5 +29,19 @@ int main()
   part2.add_education_qual(edu1);
 
   part2.print_CV();
+
+  /*cv_date_t date1;
+  date1.day = 03;
+  date1.month = 04;
+  date1.year = 1988;
+
+  cv_date_t date2;
+  date2.day = 02;
+  date2.month = 04;
+  date2.year = 1988;
+
+
+  int a = date2 < date1;
+  std::cout << "date comparision : " << a;*/
   return 0;
 } 

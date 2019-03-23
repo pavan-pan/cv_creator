@@ -2,38 +2,23 @@
 
 void Position::set_from_date(unsigned int day, unsigned int month, unsigned int year)
 {
-  this->from_date.day = day;
-  this->from_date.month = month;
-  this->from_date.year = year;
-
-  if (from_date.checkDate() != 0)
-  {
-	  std::cout << "From-date invalid " << std::endl;
-	  return;
-  }
+  from_date.set_date(day, month, year);
 }
 
-cv_date_t Position::get_from_date(void)
+std::string Position::get_from_date(void)
 {
-  return from_date;
+  return from_date.get_date();
 }
 
 
 void Position::set_to_date(unsigned int day, unsigned int month, unsigned int year)
 {
-  this->to_date.day = day;
-  this->to_date.month = month;
-  this->to_date.year = year;
-  if (from_date.checkDate() != 0)
-  {
-	  std::cout << "To-date invalid " << std::endl;
-  	  return;
-  }
+	to_date.set_date(day, month, year);
 }
 
-cv_date_t Position::get_to_date(void)
+std::string Position::get_to_date(void)
 {
-  return to_date;
+  return to_date.get_date();
 }
 
 
