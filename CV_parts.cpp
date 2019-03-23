@@ -16,6 +16,12 @@ CV_parts::CV_parts(std::string file_name)
 		return;
 	}
 }
+
+void CV_parts::add_personal_details(Personal_Details personal_details)
+{
+	this->personal_details = personal_details;
+}
+
 void CV_parts::add_work_experience(Position pos)
 {
   Work_experience.push_back(pos);  
@@ -81,8 +87,18 @@ void CV_parts::print_education_qual()
   }
 }
 
+void CV_parts::print_personal_details()
+{
+	CV_file_name <<  "Name :" << personal_details.get_name() << std::endl;
+	CV_file_name <<  "Email :" << personal_details.get_email() << std::endl;
+	CV_file_name <<  "Phone Number :" << personal_details.get_phone_number() << std::endl;
+	CV_file_name <<  "Date of Birth :" << personal_details.get_date_of_birth() << std::endl;
+	CV_file_name <<  "Place of Birth :" << personal_details.get_place_of_birth() << std::endl;
+	CV_file_name <<  "Gender :" << personal_details.get_gender() << std::endl;
+}
 void CV_parts::print_CV()
 {
+	print_personal_details();
 	print_work_experience();
 	print_education_qual();
 }

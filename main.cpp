@@ -5,18 +5,28 @@
 int main()
 {
   CV_parts part2("samplefile.txt");
-  
+  /*
+   *std::string name;
+	std::string email;
+	std::string phone_number;
+	cv_date_t date_of_birth;
+	std::string place_of_birth;
+	std::string gender;
+   */
+  cv_date_t date_of_birth(02,04,1988);
+  Personal_Details per_det("Pavan Kumar Pandappa", "pavan.pandappa@gmail.com",
+		  "+491786164357", date_of_birth, "Gulbarga", "male");
+
+  part2.add_personal_details(per_det);
+
   Position med_el;
   med_el.set_from_date (01,03,2016);
   med_el.set_to_date (01,03,2018);
   med_el.set_position_name ("R&D Engineer");
-  std::string med_el_resp1 = "Added firmware to STM32";
-  std::string med_el_resp2 = "Added firmware to Nordic";
-  med_el.set_responsibilities(med_el_resp1); 
-  med_el.set_responsibilities(med_el_resp2);
+  med_el.set_responsibilities("Added firmware to STM32");
+  med_el.set_responsibilities("Added firmware to Nordic");
   
   part2.add_work_experience(med_el); 
-  part2.print_work_experience();
 
   Education_qual edu1;
 
@@ -30,18 +40,6 @@ int main()
 
   part2.print_CV();
 
-  /*cv_date_t date1;
-  date1.day = 03;
-  date1.month = 04;
-  date1.year = 1988;
 
-  cv_date_t date2;
-  date2.day = 02;
-  date2.month = 04;
-  date2.year = 1988;
-
-
-  int a = date2 < date1;
-  std::cout << "date comparision : " << a;*/
   return 0;
 } 
